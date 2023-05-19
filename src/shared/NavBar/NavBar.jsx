@@ -28,6 +28,8 @@ const NavBar = () => {
           <Link to="/my-toys" className="mt-3 p-3">My Toys</Link>
           <Link to="/add-toy" className="mt-3 p-3">Add A Toy</Link>
           <Link to="/blog" className="mt-3 p-3">Blogs</Link>
+          <Link to="/testimonials" className="mt-3 p-3">Testimonials</Link>
+          <Link to="/featuredToys" className="mt-3 p-3">FeaturedToys</Link>
         </div>
         <div className="sm:hidden relative">
           <button
