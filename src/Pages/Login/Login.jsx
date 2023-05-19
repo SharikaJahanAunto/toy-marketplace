@@ -1,20 +1,20 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SocialBtn from '../../shared/SocialBtn/SocialBtn';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
+
+  
   const handleLogin = (e) => {
     e.preventDefault();
-    // Perform login logic here
-    // Example: You can check the email and password against your authentication system
-    // If successful, redirect the user to the desired page
-    // If unsuccessful, set the error message
+    setError('Invalid email or password'); 
+  }
 
-    setError('Invalid email or password'); // Example error message
-  };
+
 
   return (
     <div className="container mx-auto py-8 px-4">
@@ -50,12 +50,13 @@ const Login = () => {
       </form>
       <p className="text-center mt-4">
         Dont have an account?{' '}
-        <Link to="/registration" className="text-blue-500 underline">
+        <Link to="/register" className="text-blue-500 underline">
           Register here
         </Link>
+        <br />
+        <br />
+     <SocialBtn></SocialBtn>
       </p>
-      {/* Google Sign-in button */}
-      {/* ... */}
     </div>
   );
 };

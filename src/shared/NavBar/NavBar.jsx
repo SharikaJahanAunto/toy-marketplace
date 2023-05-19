@@ -22,7 +22,7 @@ const NavBar = () => {
       </div>
 
       <div className="navbar-center ">
-      <div className="hidden sm:flex">
+        <div className="hidden sm:flex">
           <Link to="/" className="mt-3 p-3">Home</Link>
           <Link to="/all-toys" className="mt-3 p-3">All Toys</Link>
           <Link to="/my-toys" className="mt-3 p-3">My Toys</Link>
@@ -32,7 +32,7 @@ const NavBar = () => {
         <div className="sm:hidden relative">
           <button
             type="button"
-            className="mt-3 p-3 text-white hover:text-gray-300"
+            className="mt-3 p-3 text-white hover:text-gray-700"
             onClick={toggleMenu}
           >
             <svg
@@ -80,6 +80,7 @@ const NavBar = () => {
           )}
         </div>
       </div>
+      
 
       <div className="navbar-end">
         <Link to="/login" className="btn">Login</Link>
