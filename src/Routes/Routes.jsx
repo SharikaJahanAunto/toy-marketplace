@@ -1,12 +1,14 @@
 import { createBrowserRouter } from 'react-router-dom'
 import Home from '../Home/Home/Home';
 import Main from '../Layout/Main'
+import AddAToy from '../Pages/AddAToy/AddAToy';
+import AllToys from '../Pages/AllToys/AllToys';
 import Blog from '../Pages/Blogs/Blog';
 import Error from '../Pages/Error/Error';
-import FeaturedToys from '../Pages/FeaturedToys/FeaturedToys';
 import Login from '../Pages/Login/Login';
+import MyToys from '../Pages/MyToys/MyToys';
 import Registration from '../Pages/Registration/Registration';
-import Testimonials from '../Pages/Testimonials/Testimonials';
+import ToyDetails from '../Pages/ToyDetails/ToyDetails';
 
 const router = createBrowserRouter([
     {
@@ -31,13 +33,22 @@ const router = createBrowserRouter([
           element: <Registration></Registration>
         },
         {
-          path: '/testimonials',
-          element: <Testimonials></Testimonials>
+          path: '/allToys',
+          element: <AllToys></AllToys>
         },
         {
-          path: '/featuredToys',
-          element: <FeaturedToys></FeaturedToys>
-        }
+          path:'/toyDetails/:id',
+          element: <ToyDetails></ToyDetails>,
+          loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+         },
+         {
+          path: '/add-toy',
+          element:<AddAToy></AddAToy>
+         },
+         {
+          path:'/my-toys',
+          element: <MyToys></MyToys>
+         }
       ]
     },
   ]);

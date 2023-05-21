@@ -1,13 +1,25 @@
-import { useState } from "react";
+/* eslint-disable no-unused-vars */
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const NavBar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user)
+  const handleLogout = () => {
+    logOut()
+      .then()
+      .catch((err) =>
+        console.log(err));
 
+
+  };
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
-
+  const imgWidth = 50;
+  const imgHeight = 50;
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -24,12 +36,10 @@ const NavBar = () => {
       <div className="navbar-center ">
         <div className="hidden sm:flex">
           <Link to="/" className="mt-3 p-3">Home</Link>
-          <Link to="/all-toys" className="mt-3 p-3">All Toys</Link>
+          <Link to="/allToys" className="mt-3 p-3">All Toys</Link>
           <Link to="/my-toys" className="mt-3 p-3">My Toys</Link>
           <Link to="/add-toy" className="mt-3 p-3">Add A Toy</Link>
           <Link to="/blog" className="mt-3 p-3">Blogs</Link>
-          <Link to="/testimonials" className="mt-3 p-3">Testimonials</Link>
-          <Link to="/featuredToys" className="mt-3 p-3">FeaturedToys</Link>
         </div>
         <div className="sm:hidden relative">
           <button
@@ -60,17 +70,12 @@ const NavBar = () => {
                   Home
                 </Link>
                 <Link
-                  to="/all-toys"
+                  to="/allToys"
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-base-200"
                 >
                   All Toys
                 </Link>
-                <Link
-                  to="/add-toy"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-base-200"
-                >
-                  Add A Toy
-                </Link>
+               
                 <Link
                   to="/blog"
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-base-200"
@@ -82,12 +87,25 @@ const NavBar = () => {
           )}
         </div>
       </div>
-      
 
-      <div className="navbar-end">
-        <Link to="/login" className="btn">Login</Link>
-      </div>
-    </div>
+       <div className="navbar-end">
+        {user ? (
+          <div>
+            {user && <div>
+               <img style={{ width: imgWidth, height: imgHeight }} src={user.photoURL} alt="" title={user.displayName} />
+            <div onClick={handleLogout} className="btn btn-logout">Logout</div>
+              </div>}
+          </div>
+        ) : (
+          <Link className="btn" to="/login">
+            Login
+          </Link>
+        )}
+      </div> 
+     
+
+
+    </div >
   );
 };
 
