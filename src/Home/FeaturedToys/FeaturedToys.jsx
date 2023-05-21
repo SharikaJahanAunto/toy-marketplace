@@ -24,7 +24,7 @@ const FeaturedToys = () => {
 
   return (
     <section className="featured-toys">
-      <h2 className="section-title">Featured Toys</h2>
+      <h2 className="section-title text-center">Featured Toys</h2>
       <div className="toy-list">
         {featuredToys.map((toy) => (
           <div className="toy-item" key={toy.id}>
