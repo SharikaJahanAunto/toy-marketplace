@@ -46,4 +46,11 @@
     font-size: 14px;
     color: #777;
   }
+
+  
+@media screen and (max-width: 768px) {
+    .toy-list {
+      grid-template-columns: 1fr;
+    }
+  }
   

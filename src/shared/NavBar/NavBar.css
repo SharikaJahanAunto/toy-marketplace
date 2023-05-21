@@ -1,0 +1,84 @@
+/* NavBar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f5f5f5;
+  }
+  
+  .navbar-start,
+  .navbar-center,
+  .navbar-end {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container {
+    width: 40px;
+  }
+  
+  .logo {
+    width: 100%;
+    height: auto;
+  }
+  
+  .menu-lg,
+  .menu-sm {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .menu-link {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu-icon {
+    width: 20px;
+    height: 20px;
+    stroke: #333;
+  }
+  
+  .menu-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+    background-color: #fff;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .logout-btn {
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .login-btn {
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+  

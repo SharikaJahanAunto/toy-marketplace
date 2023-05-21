@@ -2,6 +2,7 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import './NavBar.css'
 
 const NavBar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
