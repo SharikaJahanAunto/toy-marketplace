@@ -75,6 +75,18 @@ const NavBar = () => {
                 >
                   All Toys
                 </Link>
+                <Link
+                  to="/my-toys"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-base-200"
+                >
+                 My Toys
+                </Link>
+                <Link
+                  to="/add-toy"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-base-200"
+                >
+                Add A Toy
+                </Link>
                
                 <Link
                   to="/blog"
