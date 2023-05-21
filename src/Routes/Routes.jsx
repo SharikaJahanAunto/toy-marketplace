@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         {
           path:'/toyDetails/:id',
           element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+          loader: ({params}) => fetch(`https://toy-marketplace-server-mocha.vercel.app/toys/${params.id}`)
          },
          {
           path: '/add-toy',

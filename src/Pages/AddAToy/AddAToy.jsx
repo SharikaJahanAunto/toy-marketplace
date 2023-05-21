@@ -9,7 +9,7 @@ const AddAToy = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    fetch("http://localhost:5000/toys", {
+    fetch("https://toy-marketplace-server-mocha.vercel.app/toys", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

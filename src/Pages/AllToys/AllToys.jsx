@@ -7,7 +7,7 @@ const AllToys = () => {
   
 
   useEffect(() =>{
-    fetch('http://localhost:5000/toys')
+    fetch('https://toy-marketplace-server-mocha.vercel.app/toys')
     .then(res => res.json())
     .then(data => setToys(data))
   },[])
@@ -18,7 +18,7 @@ const AllToys = () => {
 
   // const fetchToys = async () => {
   //   try {
-  //     const response = await fetch("http://localhost:5000/toys");
+  //     const response = await fetch("https://toy-marketplace-server-mocha.vercel.app/toys");
   //     const data = await response.json();
   //     setToys(data);
   //   } catch (error) {

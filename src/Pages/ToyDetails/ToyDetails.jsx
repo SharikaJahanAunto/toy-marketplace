@@ -12,7 +12,7 @@ const ToyDetails = () => {
   // useEffect(() => {
   //   const fetchToyDetails = async () => {
   //     try {
-  //       const response = await fetch(`http://localhost:5000/toys/${id}`);
+  //       const response = await fetch(`https://toy-marketplace-server-mocha.vercel.app/toys/${id}`);
   //       const data = await response.json();
   //       setToyDetails(data);
   //     } catch (error) {
