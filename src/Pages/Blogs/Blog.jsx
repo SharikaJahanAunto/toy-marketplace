@@ -1,9 +1,11 @@
+import useTitle from "../../hooks/useTitle";
 
 const Blog = () => {
+    useTitle('Blog')
     return (
         <div className="container mx-auto py-8 px-4">
-      <h2 className="text-3xl font-bold mb-4">What is an access token and refresh token? How do they work and where should we store them on the client-side?</h2>
-      <p className="mb-6"><strong>Answer:</strong> An access token is a credential used to authenticate and authorize requests made by a client to access protected resources on a server. It typically contains information about the client and its permissions. Access tokens are short-lived and have an expiration time.
+            <h2 className="text-3xl font-bold mb-4">What is an access token and refresh token? How do they work and where should we store them on the client-side?</h2>
+            <p className="mb-6"><strong>Answer:</strong> An access token is a credential used to authenticate and authorize requests made by a client to access protected resources on a server. It typically contains information about the client and its permissions. Access tokens are short-lived and have an expiration time.
 
                 A refresh token is a credential that is used to obtain a new access token after the previous one has expired. It is typically issued alongside the access token and has a longer expiration time. The refresh token is securely stored and used to request a new access token when needed, without requiring the user to re-enter their credentials.
 

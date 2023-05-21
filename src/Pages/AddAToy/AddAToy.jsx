@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
+import useTitle from "../../hooks/useTitle";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const AddAToy = () => {
   const { register, handleSubmit } = useForm();
   const { user } = useContext(AuthContext);
+  useTitle('Add A Toy')
 
   const onSubmit = (data) => {
     console.log(data);

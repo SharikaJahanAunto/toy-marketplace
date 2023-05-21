@@ -1,10 +1,12 @@
 /* eslint-disable no-unused-vars */
 import { useContext, useEffect, useState } from "react";
+import useTitle from "../../hooks/useTitle";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
+  useTitle('My Toys')
 
   // Fetch the user's toys from a database or API
   const fetchToys = () => {

@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 import { useParams, useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const ToyDetails = () => {
   const { id } = useParams();
@@ -8,7 +9,7 @@ const ToyDetails = () => {
 
   const data = useLoaderData()
   console.log(data)
-
+  useTitle('Toy Details')
   // useEffect(() => {
   //   const fetchToyDetails = async () => {
   //     try {

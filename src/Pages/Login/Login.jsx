@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 import { AuthContext } from '../../Providers/AuthProvider';
 import SocialBtn from '../../shared/SocialBtn/SocialBtn';
 
@@ -13,6 +14,7 @@ const Login = () => {
   const location = useLocation()
   console.log('login page location', location);
   const from = location.state?.from?.pathname || '/toyDetails/:id'
+  useTitle('Login')
 
 
   

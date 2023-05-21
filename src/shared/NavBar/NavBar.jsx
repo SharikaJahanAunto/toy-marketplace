@@ -103,7 +103,7 @@ const NavBar = () => {
 
        <div className="navbar-end">
         {user ? (
-          <div>
+          <div className=" flex flex-col md:flex-row justify-between gap-10d">
             {user && <div>
                <img style={{ width: imgWidth, height: imgHeight }} src={user.photoURL} alt="" title={user.displayName} />
             <div onClick={handleLogout} className="btn btn-logout">Logout</div>

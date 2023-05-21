@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 const AllToys = () => {
   const [toys, setToys] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  useTitle('All Toys')
   
 
   useEffect(() =>{

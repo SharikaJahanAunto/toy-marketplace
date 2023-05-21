@@ -3,8 +3,10 @@ import Testimonials from "../Testimonials/Testimonials";
 import Gallery from "../Gallery/Gallery";
 import ShopByCategory from "../ShopByCategory/ShopByCategory";
 import Slider from "../Slider/Slider";
+import useTitle from "../../hooks/useTitle";
 
 const Home = () => {
+  useTitle('Home')
   return (
     <div className="py-8">
       <Slider></Slider>
