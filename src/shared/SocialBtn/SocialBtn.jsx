@@ -5,11 +5,16 @@ import { AuthContext } from '../../Providers/AuthProvider';
 import { useContext, useState } from 'react';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import app from '../../Firebase/firebase.config';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const SocialBtn = () => {
     const [user, setUser] = useState({});
     const auth = getAuth(app);
     const googleProvider = new GoogleAuthProvider();
+    const navigate = useNavigate()
+  const location = useLocation()
+  console.log('login page location', location);
+  const from = location.state?.from?.pathname || '/toyDetails/:id'
   
     const handleGoogleLogin = () => {
       signInWithPopup(auth, googleProvider)
@@ -17,6 +22,7 @@ const SocialBtn = () => {
           const user = result.user;
           setUser(user);
           console.log(user);
+          navigate(from, {replace : true})
         })
         .catch((error) => {
           const errorMessage = error.message;

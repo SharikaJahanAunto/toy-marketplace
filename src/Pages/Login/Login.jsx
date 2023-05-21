@@ -1,21 +1,39 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+/* eslint-disable no-unused-vars */
+import { useContext, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProvider';
 import SocialBtn from '../../shared/SocialBtn/SocialBtn';
 
 const Login = () => {
+  const { signIn } = useContext(AuthContext)
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate()
+  const location = useLocation()
+  console.log('login page location', location);
+  const from = location.state?.from?.pathname || '/toyDetails/:id'
 
 
   
-  const handleLogin = (e) => {
-    e.preventDefault();
-    setError('Invalid email or password'); 
-  }
+  const handleLogin = event => {
+    event.preventDefault()
+    const form = event.target
+    const email = form.email.value
+    const password = form.password.value
+    console.log(email, password)
 
+    signIn(email, password)
+        .then(result => {
+            const loggedUser = result.user
+            console.log(loggedUser);
+            navigate(from, {replace : true})
+        })
+        .catch(error => {
+            console.log(error);
+        })
 
-
+      }
   return (
     <div className="container mx-auto py-8 px-4">
       <h2 className="text-3xl font-bold mb-4">Please Login</h2>
