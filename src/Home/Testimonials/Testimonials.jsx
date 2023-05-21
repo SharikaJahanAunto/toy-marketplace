@@ -5,19 +5,19 @@ const Testimonials = () => {
       id: 1,
       name: "John Doe",
       quote: "The Disney toys exceeded my expectations! My kids absolutely love playing with them and creating their own magical adventures.",
-      image: "testimonial1.jpg",
+      image: "https://th.bing.com/th/id/OIP.OLzej9J54IZKvFRZJE_hYwHaEc?pid=ImgDet&rs=1",
     },
     {
       id: 2,
       name: "Jane Smith",
       quote: "I'm amazed by the quality and attention to detail in the Disney toys. They truly capture the essence of the characters and bring joy to our home.",
-      image: "testimonial2.jpg",
+      image: "https://i1.wp.com/theverybesttop10.com/wp-content/uploads/2016/06/Top-10-Ways-To-Get-Good-Quality-Backlinks-9.jpg?resize=510%2C493",
     },
     {
-      id: 2,
+      id: 3,
       name: "Jane Smith",
       quote: "I'm amazed by the quality and attention to detail in the Disney toys. They truly capture the essence of the characters and bring joy to our home.",
-      image: "testimonial2.jpg",
+      image: "https://th.bing.com/th/id/OIP.1Sea1Yux8EqmscfYbQYcRgHaD1?pid=ImgDet&w=750&h=389&rs=1",
     },
     
   ];
