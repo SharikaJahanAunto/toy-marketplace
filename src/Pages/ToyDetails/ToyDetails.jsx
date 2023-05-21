@@ -34,7 +34,7 @@ const ToyDetails = () => {
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <img src={picture} alt={toyName} className="rounded-lg w-full" />
+          <img src={picture} alt={toyName} className="rounded-lg w-50 h-50" />
         </div>
         <div>
           <h2 className="text-3xl font-semibold mb-4">{toyName}</h2>
@@ -57,12 +57,12 @@ const ToyDetails = () => {
             <span className="font-semibold">Sub-category:</span> {subCategory}
           </p>
           <p className="text-gray-700 mb-4">{description}</p>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+          <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 mx-3 rounded">
             Add to Cart
           </button>
           <button
           type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-red-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
           Delete
         </button>
